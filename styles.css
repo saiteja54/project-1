@@ -12,6 +12,7 @@ div{
 	background-color:  #8FD3BD;
 }
 
+
 .box1{
 	width:300px;
 	height: 300px;
@@ -215,4 +216,28 @@ a:hover{
 	position:fixed;
 	bottom:20px;
 	right:0;
+}
+
+
+
+
+@media (min-width:1000px) and (max-width:1400px){
+	body{
+		background-color: green;
+	}
+}
+@media (min-width:700px) and (max-width:999px){
+	body{
+		background-color: yellow;
+	}
+}
+
+@media (max-width:699px){
+	body{
+		background-color: blue;
+	}
+}
+
+.getBackground{
+	background-color: red;
 }
