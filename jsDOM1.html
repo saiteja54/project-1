@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>JS DOM</title>
+		
+	</head>
+	<body>
+		<h1 id="" class="head1"> Welcome to JS</h1>
+		<p id="para1">
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+		</p>
+
+		<h1 id="" class="head1"> Welcome to DOM</h1>
+
+		<img src="p1.jpg" width="400" height="400" id="imageSrc">
+
+		<script>
+			//var headingObj = document.getElementById("head1");
+
+			var headingObj = document.getElementsByClassName("head1");
+
+			var imgObj = document.getElementById("imageSrc");
+			imgObj.src = "p2.jpg";
+
+			headingObj[0].style.color = "yellow";
+			//headingObj[0].innerHTML = "Hello";
+
+			var dataInHead = headingObj[0].innerHTML;
+
+			console.log('Data ' +dataInHead);
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>JS DOM</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+		<style>
+			
+			#box1{
+				width:300px;
+				height: 300px;
+				background-color: blue;
+				position: absolute;
+			}
+
+			.addColor{
+				background-color: green !important;
+			}
+		</style>
+	</head>
+	<body>
+		<p id="para1" class="hidepara">
+			The sport of cricket has a known history beginning in the late 16th century. Having originated in south-east England, it became the country's national sport in the 18th century and has developed globally in the 19th and 20th centuries. International matches have been played since 1844 and Test cricket began, retrospectively recognised, in 1877. Cricket is the world's second most popular spectator sport 
+		</p>
+		<button type="button" id="b4">Add Class</button>
+		<div id="box1">
+
+		</div>
+		<script>
+		//	$(selector).action()
+
+		$(document).ready(function(){
+
+			$('#para1').css({'font-size':'30px'})
+			$('#b4').click(function(){
+				$('#para1').addClass('addColor');
+				$('#box1').addClass('addColor');
+				$('#para1').removeClass('hidepara');
+			});
+		});
+
+		
+		
+		
+
+
+
+
+		</script>
+	</body>
+</html>

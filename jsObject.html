@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>JS</title>
+		
+	</head>
+	<body>
+		<script>
+			var person ={
+				firstName:'ABC',
+				lastName:'QWE',
+				height:5.8,
+				weight:70,
+				fullname : function(){
+					return this.firstName + ' ' + this.lastName
+				}
+			};
+
+			var result = person.fullname();
+
+			console.log('Person first Name is :: '+ person.firstName);
+			console.log('Person first Name is :: '+ person["firstName"]);
+			console.log('Person full name is :: '+result );
+		</script>
+	</body>
+</html>
+
+// objectName.propertyName

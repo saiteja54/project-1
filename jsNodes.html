@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>JS Basics</title>
+		<!-- <script type="text/javascript" src="first.js"></script> -->
+		
+	</head>
+	<body>
+		<div id="container1">
+			<img id="image1" src="p1.jpg" width="300" height="300">
+		</div>
+		<script>
+			var newPara = document.createElement('p'); //<p></p>
+			var data = document.createTextNode('This para is created in javascript');  //This para is created in javascript
+
+			newPara.appendChild(data); //<p>This para is created in javascript</p>
+
+			var container = document.getElementById("container1");
+
+			var imageContainer = document.getElementById("image1");
+
+			//container.appendChild(newPara);
+
+			container.insertBefore(newPara,imageContainer);
+
+			imageContainer.remove();
+
+
+		</script>
+
+	</body>
+</html>

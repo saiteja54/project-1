@@ -1,0 +1,67 @@
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        {{pageTitle}}
+      </h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-2">
+                Filter By 
+            </div>
+            <div class="col-md-4">
+                <input type="text" [(ngModel)]="listFilter"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                Filtered Text ::: {{listFilter}}
+            </div>
+        </div>
+
+        <div class="row">
+                <table class="table"  *ngIf= 'products && products.length'>
+                    <thead>
+                        <tr>
+                            <th>
+                                <button type="button" class="btn btn-primary" (click)=toggleImage() >
+                                   {{showImage ? 'Hide' : 'Show'}} Image
+                                </button>
+                            </th>
+                            <th>Product Name</th>
+                            <th>Code</th>
+                            <th>Price</th>
+                            <th>Availability</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr  *ngFor="let product of products | productFilter:listFilter">
+                            <td>
+                                <img *ngIf="showImage"
+                                    [src]="product.imageUrl"
+                                    [style.width.px]="imageWidth"
+                                    [style.margin.px]="imageMargin"/>
+                            </td>
+                            <td>
+                                <a [routerLink]="['/products', product.productId]"
+                                    [queryParams]="{name:product.productName,img:product.imageUrl,desc:product.description}">
+                                     {{product.productName | uppercase}}
+                                </a>
+                            </td>
+                            <td>{{product.productCode | lowercase |  convertToSpace:'-'}}</td>
+                            <td [className] = "product.price >=20 ? 'red' : 'green'">
+                                {{product.price | currency:'INR'}}
+                            </td>
+                            <td>{{product.releaseDate}}</td>
+                            <td><pm-star [rating]="product.starRating" (ratingClicked)="onRatingClicked($event)"></pm-star></td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+
+
+    </div>
+  </div>

@@ -1,0 +1,13 @@
+{
+  "name": "node1",
+  "version": "1.0.0",
+  "description": "Node base info",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node staticApi.js",
+    "dev":"nodemon staticApi.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

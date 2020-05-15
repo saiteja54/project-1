@@ -1,0 +1,75 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>JS Basics</title>
+		<!-- <script type="text/javascript" src="first.js"></script> -->
+		
+	</head>
+	<body>
+		<script>
+			// var name ="Bhumika";
+
+			// var age = '18';
+
+			// if(age !== 18){
+			// 	console.log('Hii!!!' +name + ' You are eligible to vote ');
+			// }
+			// else{
+			// 	console.log('You are not eligible to vote ');
+			// }
+
+			// sum() // function calling 
+
+			// // function defination
+			 function sum(){
+			 	var a = 20;
+			 	var b = 30;
+			 	var c = a+b;
+			 	console.log("Sum is "+ c);
+			 }
+
+			// var result = sum(10,20);
+			
+
+			// console.log('First SUM is ' + result);
+			// console.log('Second SUM is ' + result2);
+			 var result2 = sum(40,50);
+			 function sum(q,e){
+			 	return q+e;
+			 }
+
+
+			 // Arrow function
+
+			 var multiplyData = (a,b) => a*b;
+
+			 multiplyData(2,3) //calling
+
+
+			var data = "    Hi!!! welcome to  javascript. javascript is easy to learn     ";
+			var len = data.length;
+
+			var newData = data.trim();
+
+			var newLen = newData.length;
+
+			var capData = newData.toUpperCase();
+
+			var strNew = data.substr(6);
+
+			var newLine = data.replace('javascript', 'HTML');
+
+			console.log('Old STring ' + data );
+			console.log('length is ' + len);
+			console.log('New String  ' + newData);
+			console.log('New length :::  ' + newLen);
+			console.log('Capitals  :::  ' + capData);
+		</script>
+		
+
+		>>> Slice :: takes parameters as start and end index, Takes -ve index
+		>>> SubString :: Can't take -ve indexes
+		>>> substr ::  take parameters start index and length
+	</body>
+</html>
