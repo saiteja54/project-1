@@ -1,0 +1,41 @@
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Weather App</title>
+		<meta name="generator" content="Bootply" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="/css/styles.css" rel="stylesheet">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		
+
+	</head>
+	<body>
+        <div class="container">
+                <div >
+                    <center>
+                        <h1><%=title%></h1>
+                    </center>
+                    <h2>City: <%=result.city.name%></h2>
+                </div>
+                <hr/>
+                <div class="row">
+                       <%for(let i=0;i<result.list.length;i++){%>
+                       		<div class="col-md-2 card">
+                       			<img class="card-img-top" 
+                       			src='https://openweathermap.org/img/w/<%=result.list[i].weather[0].icon%>.png'/>
+                       			<span class="topTemp">
+                       				<%=result.list[i].temp.day%>
+                       			</span>
+                       		</div>
+                       		<div class="card-body">
+                       			MAX temp: <span class="max"><%=result.list[i].temp.max%>
+                       		</div>
+                       <%}%>
+                </div>
+
+        </div>
+        
+    </body>
+</html>
